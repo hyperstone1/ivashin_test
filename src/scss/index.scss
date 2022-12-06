@@ -1,0 +1,126 @@
+.container {
+  margin-top: 10%;
+  .container-form {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    .submit-btn {
+      position: absolute;
+      right: 0;
+      top: 32px;
+    }
+    .input {
+      padding-right: 160px;
+    }
+  }
+}
+.container-notes {
+  margin: 0 auto;
+  width: 60%;
+
+  .note {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    padding: 10px;
+    .visible {
+      svg {
+        position: absolute;
+        right: 9px;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+    .invisible {
+      display: none;
+    }
+
+    .buttons {
+      width: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      svg {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: fill 0.7s, opacity 0.4s;
+      }
+      .delete {
+        &:hover {
+          fill: red;
+        }
+      }
+      .edit {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .edit-buttons {
+      width: 90px;
+      padding-right: 10px;
+    }
+    .edit-mode {
+      padding: 10px;
+    }
+  }
+  .note_edit {
+    padding: 0;
+  }
+}
+
+.visible_list {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  display: block;
+}
+.invisible_list {
+  display: none;
+}
+.invisible {
+  display: none;
+}
+.tags {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  left: 40px;
+  top: 100px;
+  background-color: #e3e3e3;
+  h4 {
+    text-align: center;
+  }
+  .visible_tags {
+    display: block;
+    position: absolute;
+    margin-top: 50px;
+    z-index: 11;
+  }
+  .invisible_tags {
+    display: none;
+  }
+  .tags_list {
+    text-align: center;
+    .tag {
+      display: inline-block;
+      color: white;
+      background-color: rgb(91, 91, 168);
+      margin: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
